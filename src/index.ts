@@ -6,12 +6,14 @@ import getCallerFile from 'get-caller-file';
  * 输出调试信息
  */
 export default (...args) => {
-  if (process.env.DEBUG) {
-    const {
-      DEBUG_FILENAME_PREFIX = 'app',
-      DEBUG_FILENAME_START = '0',
-      DEBUG_FILENAME_LENGTH = '100'
-    } = process.env;
+  const {
+    DEBUG,
+    DEBUG_FILENAME_PREFIX = 'app',
+    DEBUG_FILENAME_START = '0',
+    DEBUG_FILENAME_LENGTH = '100'
+  } = process.env;
+
+  if (DEBUG) {
     const start: number = parseInt(DEBUG_FILENAME_START, 10);
     const length: number = parseInt(DEBUG_FILENAME_LENGTH, 10);
     const filename: string = getCallerFile();
