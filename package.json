@@ -82,5 +82,8 @@
     "ts-optchain": "^0.1.8",
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "get-caller-file": "^2.0.5"
   }
 }
